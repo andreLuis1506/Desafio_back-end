@@ -8,21 +8,26 @@ export default class CreateTools1616701957172 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'int',
+            type: 'integer',
             isPrimary: true,
             isGenerated: true,
+            generationStrategy: 'increment',
+            isNullable: false,
           },
           {
             name: 'name',
             type: 'varchar',
+            isNullable: false,
           },
           {
             name: 'link',
             type: 'varchar',
+            isNullable: false,
           },
           {
             name: 'description',
             type: 'varchar',
+            isNullable: false,
           },
           {
             name: 'created_at',
