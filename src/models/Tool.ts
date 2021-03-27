@@ -23,7 +23,7 @@ export default class Tool {
   @Column()
   description: string;
 
-  @OneToMany(() => Tag, tag => tag.tool, { onDelete: 'CASCADE' })
+  @OneToMany(() => Tag, tag => tag.tool, { cascade: true, eager: true })
   @JoinTable()
   tags: Promise<Tag[]>;
 

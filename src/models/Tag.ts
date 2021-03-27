@@ -2,6 +2,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -13,10 +14,11 @@ export default class Tag {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column()
+  @Column({ name: 'tag_name' })
   tagName: string;
 
-  @ManyToOne(() => Tool, tool => tool.tags, { cascade: true })
+  @ManyToOne(() => Tool, tool => tool.tags)
+  @JoinColumn({ name: 'tool_id', referencedColumnName: 'id' })
   tool: Tool;
 
   @CreateDateColumn({ name: 'created_at' })
