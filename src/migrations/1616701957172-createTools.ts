@@ -15,7 +15,7 @@ export default class CreateTools1616701957172 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'name',
+            name: 'title',
             type: 'varchar',
             isNullable: false,
           },

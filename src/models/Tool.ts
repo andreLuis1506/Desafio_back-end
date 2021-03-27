@@ -15,7 +15,7 @@ export default class Tool {
   id: number;
 
   @Column()
-  name: string;
+  title: string;
 
   @Column()
   link: string;
