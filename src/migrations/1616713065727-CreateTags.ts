@@ -20,12 +20,12 @@ export default class CreateToolTags1616713065727 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'tagName',
+            name: 'tag_name',
             type: 'varchar',
             isNullable: false,
           },
           {
-            name: 'toolId',
+            name: 'tool_id',
             type: 'int',
             isNullable: false,
           },
@@ -45,7 +45,7 @@ export default class CreateToolTags1616713065727 implements MigrationInterface {
     await queryRunner.createForeignKey(
       'Tags',
       new TableForeignKey({
-        columnNames: ['toolId'],
+        columnNames: ['tool_id'],
         referencedTableName: 'Tools',
         referencedColumnNames: ['id'],
       }),
