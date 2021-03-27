@@ -10,7 +10,7 @@ ou
 yarn typeorm migration:run
 ```
 
-##Executando as migrations
+## Executando as migrations
 Para executar as migrations é bastante simples, basta usar o seguinte comando:
 ```
 npm run typeorm migration:run
@@ -20,7 +20,7 @@ ou
 yarn typeorm migration:run
 ```
 
-##Iniciar o servidor de desenvolvimento
+## Iniciar o servidor de desenvolvimento
 Igualmente simples aos passos anteriores, basta rodar um comando:
 ```
 npm run dev
