@@ -17,7 +17,7 @@ export default class Tag {
   @Column({ name: 'tag_name' })
   tagName: string;
 
-  @ManyToOne(() => Tool, tool => tool.tags)
+  @ManyToOne(() => Tool, tool => tool.tags, { onDelete: "CASCADE",})
   @JoinColumn({ name: 'tool_id', referencedColumnName: 'id' })
   tool: Tool;
 

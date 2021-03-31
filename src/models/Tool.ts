@@ -1,13 +1,16 @@
+import { join } from 'path';
 import {
   Column,
   CreateDateColumn,
   Entity,
   JoinTable,
+  ManyToMany,
   OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 import Tag from './Tag';
+import User from './User';
 
 @Entity('Tools')
 export default class Tool {
